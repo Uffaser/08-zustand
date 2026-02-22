@@ -17,11 +17,7 @@ const initialValues: NoteFormValues = {
   tag: "Todo",
 };
 
-interface NoteFormProps {
-  onClose: () => void;
-}
-
-export default function NoteForm({ onClose }: NoteFormProps) {
+export default function NoteForm() {
   const queryClient = useQueryClient();
   const fieldId = useId();
 
@@ -29,7 +25,6 @@ export default function NoteForm({ onClose }: NoteFormProps) {
     mutationFn: createNote,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["note"] });
-      onClose();
     },
     onError: () => console.log("Error"),
   });
@@ -102,7 +97,7 @@ export default function NoteForm({ onClose }: NoteFormProps) {
         </div>
 
         <div className={css.actions}>
-          <button type="button" onClick={onClose} className={css.cancelButton}>
+          <button type="button" className={css.cancelButton}>
             Cancel
           </button>
           <button type="submit" className={css.submitButton} disabled={false}>

@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,8 +20,8 @@ export const metadata: Metadata = {
     title: "NoteHub",
     description:
       "NoteHub is a task manager for keeping a to-do list. Gain focus, stay organized, and find peace of mind.",
-    url: "",
-    images: "",
+    url: "https://08-zustand-fh5lcb2hr-uffasers-projects.vercel.app/",
+    images: "../notehub-og-meta.jpg",
   },
 };
 
@@ -37,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${roboto.variable}`}>
         <TanStackProvider>
           <Header />
           {children}
