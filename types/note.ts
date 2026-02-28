@@ -10,4 +10,10 @@ export interface Note {
     updatedAt: string;
 }
 
+export interface NoteValue {
+    title: string;
+    content: string;
+    tag: NoteTag;
+}
+
 
