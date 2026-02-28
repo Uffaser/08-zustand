@@ -10,8 +10,8 @@ export const metadata: Metadata = {
     title: "Create new task with NoteHub",
     description:
       "NoteHub is a task manager for keeping a to-do list. Gain focus, stay organized, and find peace of mind.",
-    url: "https://08-zustand-fh5lcb2hr-uffasers-projects.vercel.app/",
-    images: "../notehub-og-meta.jpg",
+    url: "https://08-zustand-pt9abt0kt-uffasers-projects.vercel.app/notes/action/create",
+    images: { url: "../notehub-og-meta.jpg" },
   },
 };
 

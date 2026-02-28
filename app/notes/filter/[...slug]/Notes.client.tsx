@@ -27,13 +27,10 @@ export default function NotesClient({ tag }: NotesClientProps) {
   const notes = data?.notes || [];
   const totalPages = data?.totalPages || 0;
 
-  const handleChange = useDebouncedCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      setSearchValues(e.target.value);
-      setPage(1);
-    },
-    300,
-  );
+  const handleChange = useDebouncedCallback((value: string) => {
+    setSearchValues(value);
+    setPage(1);
+  }, 300);
 
   return (
     <>

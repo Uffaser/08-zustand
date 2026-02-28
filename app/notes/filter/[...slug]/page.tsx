@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `Note ${tag}`,
       description: `${tag}`,
       url: "https://08-zustand-fh5lcb2hr-uffasers-projects.vercel.app/",
-      images: "../notehub-og-meta.jpg",
+      images: { url: "../notehub-og-meta.jpg" },
     },
   };
 }
