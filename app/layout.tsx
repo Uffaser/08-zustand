@@ -21,7 +21,13 @@ export const metadata: Metadata = {
     description:
       "NoteHub is a task manager for keeping a to-do list. Gain focus, stay organized, and find peace of mind.",
     url: "https://08-zustand-fh5lcb2hr-uffasers-projects.vercel.app/",
-    images: { url: "../notehub-og-meta.jpg" },
+    images: [
+      {
+        url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
